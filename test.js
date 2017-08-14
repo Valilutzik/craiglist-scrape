@@ -1,7 +1,7 @@
 require('replay')
 
 var tape = require('tape')
-var getListings = require('./')
+var getListings = require('./index-recursive')
 
 tape('should get 50 listings', function (t) {
   getListings(50, function (err, listings) {
