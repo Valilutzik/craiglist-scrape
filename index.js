@@ -9,7 +9,7 @@ function getListings(nDesired, cb){
             var numberOfPages = Math.floor(nDesired/120);
             const tracker_ = numberOfPages;
 
-            var getData = function(nDesired, cb){
+            var getData = function(){
                 
                 var queryUrl = (tracker_ - numberOfPages > 0) ? baseUrl + '?s=' + (tracker_ - numberOfPages) * 120 : baseUrl; 
                 var options = {
@@ -62,7 +62,7 @@ function getListings(nDesired, cb){
                 });
             };
 
-        return getData(nDesired, cb);        
+        return getData();        
 };                
 
 module.exports = function(nDesired, cb){
